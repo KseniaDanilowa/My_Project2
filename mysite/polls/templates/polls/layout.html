@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
@@ -19,6 +19,7 @@
             <a href="{% url 'about' %}"><li><i class="fa fa-user" aria-hidden="true"></i> About me</li></a>
             <a href="{% url 'news_home' %}"><li><i class="fas fa-bullhorn"></i> News</li></a>
             <a href="{% url 'contacts' %}"><li><i class="fa fa-phone" aria-hidden="true"></i> Contacts</li></a>
+            <a href="{% url 'create' %}"><li><button class ="btn btn-danger"><i class="fas fa-plus-circle"></i> Add news</button></li></a>
         </ul>
         <style>
             a {text-decoration: none;}
