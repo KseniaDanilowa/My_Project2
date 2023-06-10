@@ -1,0 +1,21 @@
+{% extends 'polls/layout.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<p class="hello1">Отзывы</p>
+        {% for el in table %}
+
+        <p class="name" style="margin-left: 350px; padding-top: 30px">{{el.name}} {{el.surname}}</p>
+        <p class="message" style="margin-left: 350px">{{el.message}}</p>
+        {% for el2 in table2 %}
+        {% if el.id == el2.feedback_id %}
+        <p class="name" style="margin-left: 400px">Ксения</p>
+        <p class="comment" style="margin-left: 400px">{{el2.comment}}</p>
+
+        {% endif %}
+        {% endfor %}
+        <br><br>
+        {% endfor %}
+{% endblock %}

@@ -1,11 +1,24 @@
 {% extends 'polls/layout.html' %}
+{% load static %}
 
 {% block title %}About me{% endblock %}
 
 {% block content %}
-    <div class="features">
-        <h1>About me</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet odio iaculis, gravida magna id, rutrum ex. In facilisis maximus nisl, eget vulputate dolor. Cras iaculis est libero, vel elementum velit tempus et. Mauris venenatis, neque sit amet pharetra auctor, elit ante dignissim mauris, id ullamcorper mauris quam a turpis. Donec vestibulum tellus vitae felis bibendum pulvinar. Nam ultrices neque aliquet justo malesuada varius. Suspendisse neque sapien, iaculis et commodo sit amet, posuere at arcu. Pellentesque tristique molestie mauris, sed tempus nunc elementum id. Maecenas ac justo id velit maximus elementum. Sed vel varius metus, vel euismod odio. Quisque nibh enim, tempor ac porta sit amet, vestibulum nec neque.</p>
-        <button class="btn btn-danger">Click</button>
+    <div class="container">
+        <div class ="row">
+            <div class ="col-12">
+                <p><img src="{% static '/polls/img/my_photo.jpg' %}" width="375" height="500" align="middle"> Бедный студент</p>
+                 <h2>Контакты для связи</h2>
+            </div>
+        </div>
     </div>
-{% endblock %}
+    <div class="container">
+        <div class ="row">
+            <div class ="col-12">
+                <p>Телефон: +7 (123) 456-78-90</p>
+                <p>Почта: <a href="mailto: ksenija.danlova@yandex.ru">ksenija.dan1lova@yandex.ru</a></p>
+                <p>Телеграм: @Senya_dan1ova</p>
+            </div>
+        </div>
+    </div>    
+{% endblock content %}

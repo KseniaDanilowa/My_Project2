@@ -1,0 +1,29 @@
+{% extends 'polls/layout.html' %}
+
+{% block title %}Feedback{% endblock %}
+
+{% block content %}
+<p class="hello1">Оставить отзыв о сайте</p><br><br>
+<p class="hello">Сначала расскажи о себе!</p>
+<div class="form">
+    <form action="{% url 'create_2' %}" method="post">
+        {% csrf_token %}
+        <div>
+            <input name="name" required type="text" placeholder="Имя">
+            <input name="surname" required type="text" placeholder="Фамилия">
+            <input name="email" required type="email" placeholder="Почта">
+
+
+        </div>
+        <br><br><br>
+        <p>Отзыв</p>
+        <div class="message">
+
+            <textarea name="message" required placeholder=""></textarea>
+
+            <input type="submit" value="Отправить">
+        </div>
+    </form>
+</div>
+
+{% endblock %}
