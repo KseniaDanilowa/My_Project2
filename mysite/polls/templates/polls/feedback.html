@@ -4,7 +4,7 @@
 
 {% block content %}
 <p class="hello1">Оставить отзыв о сайте</p><br><br>
-<p class="hello">Сначала расскажи о себе!</p>
+<h3>Сначала расскажи о себе!</h3>
 <div class="form">
     <form action="{% url 'create_2' %}" method="post">
         {% csrf_token %}

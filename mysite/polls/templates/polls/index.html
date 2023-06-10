@@ -1,12 +1,16 @@
 {% extends 'polls/layout.html' %}
+{% load static %}
 
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
     <div class="features">
-        <h1>{{ title }}</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet odio iaculis, gravida magna id, rutrum ex.</p>
-        <button class="btn btn-danger">Click</button>
+        <h1>Добро пожаловать во Fresh!</h1><br><br>
+        <p>Перед Вами некое подобие новостного сайта. Здесь вы не найдете статей о политике, но увидите парочку (интересных) статей из развлекательной области и IT-индустрии.</p>
+        <p>Буду очень рада получить feedback с Вашей стороны с рекомендациями по улучшению сайта </p>
+        <p><img src="{% static '/polls/img/MBlU1QiE3Yg.jpg' %}"></p>
+        <p>Не судите строго, я учусь:)</p>
+        <a href="{% url 'news_home' %}"><button class="btn btn-danger">Go to News</button></a>
 
     </div>
 {% endblock %}
